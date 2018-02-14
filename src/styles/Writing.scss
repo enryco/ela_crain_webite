@@ -3,4 +3,9 @@
 .home-writing {
   background-color: $black;
   color: $white;
+  min-height: 100vh;
+  
+  .writing {
+    overflow: hidden;
+  }
 }

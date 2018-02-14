@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Redirect } from 'react-router-dom';
+import { Route, Redirect, withRouter } from 'react-router-dom';
 import WritingPosts from './Posts';
 import WritingPost from './Post';
 import WritingAbout from './About';
@@ -46,4 +46,6 @@ class WritingRoute extends Component {
   }
 }
 
-export default WritingRoute;
+const WritingRouteWithRouter = withRouter(WritingRoute);
+
+export default WritingRouteWithRouter;

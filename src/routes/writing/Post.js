@@ -106,7 +106,7 @@ class PostRoute extends Component {
     );
 
     return (
-      <div className="writing">
+      <div className="">
         <Header showLayoutIcons={false} />
         <PostHeader post={post} />
         {this.getNavPrev()}
