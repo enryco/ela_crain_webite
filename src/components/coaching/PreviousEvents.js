@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import _ from 'lodash';
 
 const PreviousEvents = props => {
@@ -15,13 +15,13 @@ const PreviousEvents = props => {
         {images.length > 0 &&
           _.map(images, (image, index) => (
             <div
+              key={index}
               className={`ec-previous-events__image-contain  ec-previous-events__image-contain--${index}`}
             >
               <img
-                key={index}
                 className={`ec-previous-events__image`}
                 src={image.fields.image}
-                alt="previous-event-image"
+                alt="previous-event"
               />
             </div>
           ))}
