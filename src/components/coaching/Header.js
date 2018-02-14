@@ -20,7 +20,8 @@ class Header extends Component {
 
   handleScrolling = e => {
     // console.log(e);
-    const scrollTop = document.documentElement.scrollTop;
+    const scrollTop = window.scrollY;
+
     this.setState({ scrollTop });
   };
 
@@ -41,6 +42,7 @@ class Header extends Component {
         style={{
           position: isHome ? 'fixed' : 'relative',
           background: this.state.scrollTop > 0 ? 'white' : 'transparent',
+          width: '100vw',
           zIndex: 1000000
         }}
       >
