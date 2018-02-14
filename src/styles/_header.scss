@@ -282,7 +282,7 @@
 * Only edit _Differences_ to Black/Writing Site here
 */
 
-.ec-header--white {    
+.ec-header--white {
     .ec-header {
         &__logo-container {
             text-align: right;
@@ -369,6 +369,12 @@
 @media all and (min-width: $desktop) {
     .ec-header--white {
         .ec-header {
+            
+            &--open {
+                margin-top: 0;
+                transition: margin-top $animation-duration $animation-type;
+            }
+
             &__logo {
                 background-image: url("images/ela_black.svg");
             }
