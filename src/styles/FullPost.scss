@@ -91,7 +91,7 @@
                 height: 64px;
                 border-radius: 32px;
             }
-            
+
             .author-name {
                 height: 27px;
                 font-family: Lora;
@@ -220,6 +220,12 @@
                 letter-spacing: 1px;
                 text-align: left;
                 margin: 74px 25% 0 25%;
+            }
+
+            .author {
+                .author-short-bio {
+                    width: 50vw;
+                }
             }
         }
     }
