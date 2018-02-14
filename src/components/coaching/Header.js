@@ -19,7 +19,7 @@ class Header extends Component {
   }
 
   handleScrolling = e => {
-    console.log(e);
+    // console.log(e);
     const scrollTop = document.documentElement.scrollTop;
     this.setState({ scrollTop });
   };

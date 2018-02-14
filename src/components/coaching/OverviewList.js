@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import '../../styles/coaching/OverviewPostList.css';
 
-class PostList extends Component {
+class OverviewList extends Component {
   render() {
     const posts = this.props.items;
 
@@ -30,4 +30,4 @@ class PostList extends Component {
   }
 }
 
-export default PostList;
+export default OverviewList;
