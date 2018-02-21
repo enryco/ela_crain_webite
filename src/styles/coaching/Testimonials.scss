@@ -82,6 +82,7 @@
 
 @media all and (min-width: $desktop) {
     .testimonials {
+        background: green;
         .header {}
 
         .items {
@@ -89,7 +90,7 @@
             align-items: flex-start;
 
             .item {
-                width: calc(30vw);
+                width: 33%;
                 padding: 0 25px 40px 25px;
 
                 .author-picture {}
