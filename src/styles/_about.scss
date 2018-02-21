@@ -16,7 +16,7 @@
         flex: 1;
         position: relative;
     }
-
+    
     &__image-wrapper {
         background-image: url("./images/writing-about.png");
         background-repeat: no-repeat;
@@ -33,7 +33,7 @@
         &__container {
             flex-flow: column;
         }
-
+        
         &__image-wrapper {
             background-image: url("./images/coaching-about.jpg");
         }
@@ -45,7 +45,7 @@
         &__container {
             flex-flow: row;
         }
-
+        
         &__image-wrapper {
             background-image: url("./images/writing-about.png");
             background-repeat: no-repeat;
@@ -53,16 +53,17 @@
             position: sticky;
             top: 0;
             width: 40vw;
-            height: 100vw;
+            height: 50vw;
+            max-height: 100vh;
         }
     }
-
+    
     .ec-about--coaching {
         .ec-about {
             &__container {
                 flex-flow: row;
             }
-
+            
             &__image-wrapper {
                 background-image: url("./images/coaching-about.jpg");
             }
