@@ -5,9 +5,11 @@ import '../styles/writing/Footer.css';
 import facebookBlack from '../icons/footer_black/facebook.svg';
 import twitterBlack from '../icons/footer_black/twitter.svg';
 import mediumBlack from '../icons/footer_black/medium.svg';
+import mailBlack from '../icons/footer_black/mail.svg';
 import facebookWhite from '../icons/footer_white/facebook.svg';
 import twitterWhite from '../icons/footer_white/twitter.svg';
 import mediumWhite from '../icons/footer_white/medium.svg';
+import mailWhite from '../icons/footer_white/mail.svg';
 
 class Header extends Component {
   render() {
@@ -15,12 +17,14 @@ class Header extends Component {
       white: {
         facebook: facebookWhite,
         twitter: twitterWhite,
-        medium: mediumWhite
+        medium: mediumWhite,
+        mail: mailWhite
       },
       black: {
         facebook: facebookBlack,
         twitter: twitterBlack,
-        medium: mediumBlack
+        medium: mediumBlack,
+        mail: mailBlack
       }
     };
 
@@ -50,6 +54,9 @@ class Header extends Component {
             rel="noopener noreferrer"
           >
             <img src={social[type].medium} alt="ela crain's medium" />
+          </a>
+          <a href="mailto:hello@elacrain.com">
+            <img src={social[type].mail} alt="ela crain's mail" />
           </a>
         </div>
         <div className="meta">
