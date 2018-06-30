@@ -22,7 +22,7 @@ class SinglePost extends Component {
               {post.fields && post.fields.headline}
             </div>
             <div className="button">
-              <Link className="" to={`/coaching/posts/${post.id}`}>
+              <Link className="" to={`/coaching/posts/${post.slug}`}>
                 Read
               </Link>
             </div>
