@@ -15,7 +15,7 @@ class OverviewList extends Component {
         <ul className="overview-post-list coaching">
           {posts.map(post => (
             <li key={post.title} className="post">
-              <Link to={`/coaching/posts/${post.id}`}>
+              <Link to={`/coaching/posts/${post.slug}`}>
                 <div
                   className="title"
                   dangerouslySetInnerHTML={{ __html: post.title }}

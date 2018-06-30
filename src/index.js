@@ -8,7 +8,7 @@ import ScrollToTop from './utils/ScrollToTop';
 import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(
-  <BrowserRouter basename="">
+  <BrowserRouter basename="wp">
     <ScrollToTop>
       <App />
     </ScrollToTop>

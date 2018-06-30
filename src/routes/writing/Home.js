@@ -22,7 +22,7 @@ class WritingRoute extends Component {
         />
         <Route
           exact
-          path="/writing/posts/:id"
+          path="/writing/posts/:slug"
           render={({ match }) => {
             return <WritingPost posts={this.props.posts} match={match} />;
           }}

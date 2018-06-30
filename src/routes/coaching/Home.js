@@ -27,7 +27,7 @@ class CoachingRoute extends Component {
         />
         <Route
           exact
-          path="/coaching/posts/:id"
+          path="/coaching/posts/:slug"
           render={({ match }) => {
             return <Post posts={this.props.posts} match={match} />;
           }}

@@ -20,7 +20,8 @@ export const getAllPosts = () => {
           status: post.status,
           tags: post.tags,
           categories: post.categories,
-          fields: post.acf
+          fields: post.acf,
+          slug: post.slug
         };
       })
     );

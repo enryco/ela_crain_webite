@@ -27,9 +27,7 @@ class PostRoute extends Component {
 
   calculateState({ posts, match }) {
     // retrieve the post
-    const postIndex = posts.findIndex(
-      p => p.id === window.parseInt(match.params.id)
-    );
+    const postIndex = _.findIndex(posts, p => p.slug === match.params.slug);
 
     let { post, nextPost, prevPost } = this.getPostObjects(posts, postIndex);
 
@@ -64,7 +62,7 @@ class PostRoute extends Component {
       this.state.prevPost && (
         <div className="post-navigation nav-prev">
           <div className="nav-content">
-            <Link to={`/writing/posts/${this.state.prevPost.id}`}>
+            <Link to={`/writing/posts/${this.state.prevPost.slug}`}>
               <div
                 className="post-title"
                 dangerouslySetInnerHTML={{ __html: this.state.prevPost.title }}
@@ -82,7 +80,7 @@ class PostRoute extends Component {
       this.state.nextPost && (
         <div className="post-navigation nav-next">
           <div className="nav-content">
-            <Link to={`/writing/posts/${this.state.nextPost.id}`}>
+            <Link to={`/writing/posts/${this.state.nextPost.slug}`}>
               <div
                 className="post-title"
                 dangerouslySetInnerHTML={{ __html: this.state.nextPost.title }}

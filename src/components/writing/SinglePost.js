@@ -9,7 +9,7 @@ class SinglePost extends Component {
 
     return (
       <div className="">
-        <Link className="single-post-link" to={`/writing/posts/${post.id}`}>
+        <Link className="single-post-link" to={`/writing/posts/${post.slug}`}>
           {post.id && <ImageCollage post={post} />}
           <div className="single-post">
             <div
@@ -20,7 +20,7 @@ class SinglePost extends Component {
               {post.fields && post.fields.headline}
             </div>
             <div className="button">
-              <Link className="" to={`/writing/posts/${post.id}`}>
+              <Link className="" to={`/writing/posts/${post.slug}`}>
                 Read
               </Link>
             </div>

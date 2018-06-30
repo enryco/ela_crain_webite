@@ -11,7 +11,7 @@ class SinglePost extends Component {
 
     return (
       <div className="">
-        <Link className="single-post-link" to={`/coaching/posts/${post.id}`}>
+        <Link className="single-post-link" to={`/coaching/posts/${post.slug}`}>
           {post.id && <ImageCollage post={post} />}
           <div className="single-post coaching">
             <div
