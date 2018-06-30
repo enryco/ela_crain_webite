@@ -14,6 +14,7 @@ const ABOUT_COACHING_CATEGORY = 9;
 const ABOUT_WRITING_CATEGORY = 10;
 const REVIEWS_WRITING_CATEGORY = 11;
 const REVIEWS_COACHING_CATEGORY = 12;
+const HOME_COACHING = 14;
 
 // const POEMS_CATEGORY = 3;
 // const STORIES_CATEGORY = 4;
@@ -46,14 +47,16 @@ class App extends Component {
       });
     });
     WritingAPI.getAllPosts().then(results => {
+      console.log(results);
+
       // filter about
       const about = {
         coaching: results.filter(
           p => p.categories.indexOf(ABOUT_COACHING_CATEGORY) !== -1
-        )[0].content,
+        )[0],
         writing: results.filter(
           p => p.categories.indexOf(ABOUT_WRITING_CATEGORY) !== -1
-        )[0].content
+        )[0]
       };
 
       // filter reviews
@@ -71,6 +74,11 @@ class App extends Component {
         p => p.categories.indexOf(13) !== -1
       );
 
+      // filter coaching-home
+      const coachingHome = results.filter(
+        p => p.categories.indexOf(HOME_COACHING) !== -1
+      )[0];
+
       // filter posts && setstate
       this.setState({
         writingPosts: results.filter(
@@ -81,6 +89,7 @@ class App extends Component {
         ),
         about,
         reviews,
+        coachingHome,
         previousEvents,
         status: 'ready'
       });
@@ -110,6 +119,7 @@ class App extends Component {
                 events={this.state.events}
                 previousEvents={this.state.previousEvents}
                 about={this.state.about.coaching}
+                coachingHome={this.state.coachingHome}
                 reviews={this.state.reviews.coaching}
               />
             )}

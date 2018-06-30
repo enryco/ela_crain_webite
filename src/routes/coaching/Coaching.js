@@ -5,6 +5,7 @@ import WorkshopList from '../../components/coaching/WorkshopList';
 import Testimonials from '../../components/coaching/Testimonials';
 import PreviousEvents from '../../components/coaching/PreviousEvents';
 import NewsletterForm from '../../components/NewsletterForm';
+import _ from 'lodash';
 
 import '../../styles/coaching/Coaching.css';
 
@@ -16,19 +17,12 @@ class CoachingRoute extends Component {
         <div className="container">
           {/* HERO */}
           <div className="coaching-hero-container">
-            <div className="coaching-hero">
-              <div className="head">
-                Discover your purpose. <br />
-                Open up with trust. <br />
-                Play with life.
-              </div>
-              <div className="sub">
-                I help people to become top-performers and rebels with a cause.{' '}
-                <br />
-                Join me to transform your career and connect with your
-                creativity.
-              </div>
-            </div>
+            <div
+              className="coaching-hero"
+              dangerouslySetInnerHTML={{
+                __html: _.get(this, 'props.coachingHome.content')
+              }}
+            />
           </div>
 
           {/* TESTIMONIALS */}
@@ -47,7 +41,7 @@ class CoachingRoute extends Component {
           <section className="about-section">
             <div className="left">
               <img
-                src={require('../../images/coaching-about.jpg')}
+                src={_.get(this, 'props.about.fields.image')}
                 alt="Ela Crain"
                 className="portrait"
                 width="100%"
@@ -56,7 +50,7 @@ class CoachingRoute extends Component {
             <div
               className="right"
               dangerouslySetInnerHTML={{
-                __html: this.props.about
+                __html: this.props.about.content
               }}
             />
           </section>

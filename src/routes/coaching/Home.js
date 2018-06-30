@@ -40,6 +40,7 @@ class CoachingRoute extends Component {
               events={this.props.events}
               previousEvents={this.props.previousEvents}
               about={this.props.about}
+              coachingHome={this.props.coachingHome}
               reviews={this.props.reviews}
             />
           )}
