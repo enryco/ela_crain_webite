@@ -5,6 +5,7 @@ import WorkshopList from '../../components/coaching/WorkshopList';
 import Testimonials from '../../components/coaching/Testimonials';
 import PreviousEvents from '../../components/coaching/PreviousEvents';
 import NewsletterForm from '../../components/NewsletterForm';
+import ContactForm from '../../components/ContactForm';
 import _ from 'lodash';
 
 import '../../styles/coaching/Coaching.css';
@@ -47,12 +48,17 @@ class CoachingRoute extends Component {
                 width="100%"
               />
             </div>
-            <div
-              className="right"
-              dangerouslySetInnerHTML={{
-                __html: this.props.about.content
-              }}
-            />
+            <div className="right">
+              {/* TEXT SECTION  */}
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: this.props.about.content
+                }}
+              />
+
+              {/* CONTACT SECTION  */}
+              <ContactForm type="coaching" />
+            </div>
           </section>
 
           {/* NEWSLETTER FORM */}
