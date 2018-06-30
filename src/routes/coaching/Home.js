@@ -4,6 +4,7 @@ import Posts from './Posts';
 import Post from './Post';
 import Event from './Event';
 import About from './About';
+import Podcast from './Podcast';
 import Coaching from './Coaching';
 
 import '../../styles/Coaching.css';
@@ -50,6 +51,11 @@ class CoachingRoute extends Component {
           render={() => (
             <About about={this.props.about} reviews={this.props.reviews} />
           )}
+        />
+
+        <Route
+          path="/coaching/podcast"
+          render={() => <Podcast podcast={this.props.podcast} />}
         />
       </div>
     );

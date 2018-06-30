@@ -85,6 +85,16 @@ class Header extends Component {
             >
               About
             </Link>
+            <Link
+              className={
+                this.props.location.pathname.split('/')[2] === 'podcast'
+                  ? 'active'
+                  : ''
+              }
+              to="/coaching/podcast"
+            >
+              Podcast
+            </Link>
           </div>
           <div
             className="ec-header__logo-container"

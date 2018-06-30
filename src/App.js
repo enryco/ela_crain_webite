@@ -15,6 +15,7 @@ const ABOUT_WRITING_CATEGORY = 10;
 const REVIEWS_WRITING_CATEGORY = 11;
 const REVIEWS_COACHING_CATEGORY = 12;
 const HOME_COACHING = 14;
+const PODCAST = 15;
 
 // const POEMS_CATEGORY = 3;
 // const STORIES_CATEGORY = 4;
@@ -79,6 +80,11 @@ class App extends Component {
         p => p.categories.indexOf(HOME_COACHING) !== -1
       )[0];
 
+      // filter podcast
+      const podcast = results.filter(
+        p => p.categories.indexOf(PODCAST) !== -1
+      )[0];
+
       // filter posts && setstate
       this.setState({
         writingPosts: results.filter(
@@ -88,6 +94,7 @@ class App extends Component {
           p => p.categories.indexOf(COACHING_CATEGORY) !== -1
         ),
         about,
+        podcast,
         reviews,
         coachingHome,
         previousEvents,
@@ -117,6 +124,7 @@ class App extends Component {
               <Coaching
                 posts={this.state.coachingPosts}
                 events={this.state.events}
+                podcast={this.state.podcast}
                 previousEvents={this.state.previousEvents}
                 about={this.state.about.coaching}
                 coachingHome={this.state.coachingHome}
